@@ -9,7 +9,6 @@ public:
     float percentage;
     int marks;
 
-    // Constructor defined inside class body
     student(string name, int rollno, float percentage, int marks) {
         this->name = name;
         this->rollno = rollno;

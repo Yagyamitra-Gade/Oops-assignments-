@@ -11,13 +11,14 @@ public:
 
     void display()
     {
+        cout<<"#### STUDENT DETAILS ####"<<endl;
         cout << "NAME OF STUDENT IS :" <<this-> name << endl;
         cout << "ROLL.NO OF STUDENT IS : " << this->rollno << endl;
         cout << "PERCENTAGE OF STUDENT IS : " << this->percentage << endl;
         cout << "MARKS OF STUDENT IS : " << this->marks << endl;
     }
 };
-student(string name, int rollno,float percentage,  int marks) {
+    student(string name, int rollno,float percentage,  int marks) {
     this->name = name;
     this->rollno = rollno;
     this->percentage = percentage;

@@ -1,44 +1,56 @@
 #include <iostream>
 using namespace std;
-
 class person
 {
-public:
-    string name;
-    int age;
-    long contact;
+    public:
+    string first_name;
+    string last_name;
+    string gender;
 
     void display()
     {
-        cout<<"##### STUDENT DETAILS #####"<<endl;
-        cout<<"NAME OF STUDENT IS     : "<<name<<endl;
-        cout<<"AGE OF STUDENT IS      : "<<age<<endl;
-        cout<<"CONTACT OF STUDENT IS  : "<<contact<<endl;
+        cout<<"##### PERSON INFORMATION ##### \n"<<endl;
+        cout<<"FIRST NAME OF PERSON IS : "<<first_name<<endl;
+        cout<<"LAST NAME OF PERSON IS  : "<<last_name<<endl;
+        cout<<"GENDER OF PERSON IS     :\n"<<gender<<endl;
     }
 };
-
-class student:public person
+ class employee:public person 
 {
-public:
-    int rollno;
+    public:
     string branch;
+    int age;
 
-    void showdata()
+    void show()
     {
-        cout<<"ROLL.NO OF STUDENT IS  : "<<rollno<<endl;
-        cout<<"BRANCH OF STUDENT IS   : "<<branch<<endl;
+        cout<<"##### EMPLOYEE INFORMATION #####\n"<<endl;
+        cout<<"BRANCH OF EMPLOYEE IS    : "<<branch<<endl;
+        cout<<"AGE OF EMPLOYEE IS       : \n"<<age<<endl;
     }
 };
 
-int main()
-{
-    student s1;
-    s1.name = "prince";
-    s1.age = 18;
-    s1.contact = 9632514875;
-    s1.rollno = 23;
-    s1.branch = "CSE";
-    s1.display();
-    s1.showdata();
-    return 0;
+ class manager:public employee
+ {
+   public:
+     float salary;
+
+     void info()
+     {
+         cout<<"##### MANAGER INFORMATION ##### \n"<<endl;
+         cout<<"SALARY OF MANAGER IS : "<<salary<<endl;
+     }
+};
+ int main()
+ {
+   manager m1;
+   m1.first_name = "suraj";
+   m1.last_name = "patil";
+   m1.gender = "MALE";
+   m1.branch = "CSE";
+   m1.age = 20;
+   m1.salary = 65000; 
+   m1.display();
+   m1.show();
+   m1.info();
+   return 0;
 }

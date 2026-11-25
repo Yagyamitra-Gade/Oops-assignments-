@@ -35,3 +35,4 @@ int main()
  bill.product(500,400,600,800);
  return 0;
 }
+ 
